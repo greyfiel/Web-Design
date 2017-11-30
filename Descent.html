@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+	<head>
+	<title>Theme Test</title>
+
+<style type="text/css">
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700|Raleway:400,700|Tangerine');
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 2px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ebebeb;
+}
+::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+body {
+    background-color:#dcdcdc;
+    color:#555;
+    font-size:12px;
+    font-family:Raleway;
+    margin:0px;
+}
+
+a {
+    color:#555;
+    text-decoration-style:dotted;
+   -webkit-transition: all 1.0s ease-in-out;
+   -moz-transition: all 1.0s ease-in-out;
+   -o-transition: all 1.0s ease-in-out;
+}
+
+a:hover {
+    color:#000;
+    filter: blur(2.5px);
+   -webkit-transition: all 1.0s ease-in-out;
+   -moz-transition: all 1.0s ease-in-out;
+   -o-transition: all 1.0s ease-in-out;
+}
+hr {
+    max-width:180px;
+}
+
+h2 {
+    font-family:Oswald;
+    margin:0px;
+}
+
+h2:first-child {
+    margin-top:-5px;
+}
+
+blockquote {
+    border-left: 2px solid #555;
+    padding: 2px 7px;
+    margin: 3px 00px 3px 8px;
+}
+
+blockquote p:first-child {
+    margin-top:0px;
+    -webkit-margin-before:0px;
+}
+
+blockquote p:last-child {
+    margin-bottom:0px;
+    -webkit-margin-after:0px;
+}
+
+blockquote img {
+    max-width:calc(100% - 30px);
+    height:auto;
+}
+
+img {
+    max-width:500px;
+    height:auto;
+}
+
+small, sup, sub {
+    font-size:12px;
+}
+
+#top {
+    position:absolute;
+    width:900px;
+    height:260px;
+    background:url('http://static.tumblr.com/lp5yix4/7Mvp08x4o/image-hold.png') #111 bottom center;
+    left:calc(50% - 450px);
+}
+
+#topnav {
+    position:fixed;
+    width:900px;
+    height:35px;
+    background-color:#ebebeb;
+    left:calc(50% - 451px);
+    font-family:Oswald;
+    font-size:14px;
+    z-index:999;
+    border: 1px solid #dcdcdc;
+    border-top:none;
+}
+
+#topnav a{
+    text-decoration:none;
+}
+
+#topnav a:hover{
+    filter: blur(0px);
+}
+
+.prev {
+    position:absolute;
+    width:20px;
+    text-align:center;
+    line-height:35px;
+    font-size:18px;
+    z-index: 999;
+    margin-left: -34px;
+}
+
+.next {
+    position:absolute;
+    width:20px;
+    text-align:center;
+    line-height:35px;
+    font-size:18px;
+    z-index: 999;
+    margin-left: 915px;
+}
+
+#toptitle {
+    position:fixed;
+    font-weight:700;
+    font-size:20px;
+    width:238px;
+    height:35px;
+    padding:0px 20px;
+}
+
+#toptitle a{
+    text-transform:uppercase;
+    line-height:35px;
+}
+
+#toplinks {
+    position:fixed;
+    margin-left:278px;
+    text-transform:uppercase;
+}
+
+.tl {
+    display:inline-block;
+    text-align:center;
+    width:102.5px;
+    margin-right:-3px;
+    height:35px;
+    line-height:35px;
+    background-color:#ebebeb;
+    border-left:1px solid #dcdcdc;
+}
+
+#side {
+    position:absolute;
+    width:300px;
+    margin-left:calc(50% - 445px);
+    padding-top:280px;
+    height:200px;
+}
+
+.box {
+    width:260px;
+    padding:10px 20px 5px 20px;
+    background-color:#ebebeb;
+    text-align:justify;
+    text-align-last:center;
+    margin-bottom:30px;
+}
+
+.boxt {
+    min-height:20px;
+    font-size:15px;
+    font-family:Oswald;
+    font-weight:700;
+    text-align:center;
+    text-transform:uppercase;
+    padding-bottom:8px;
+    margin-bottom:3px;
+    border-bottom:1px solid #dcdcdc;
+}
+
+#posts {
+    position:absolute;
+    width:540px;
+    margin-left:calc(50% - 95px);
+    padding-top:280px;
+}
+
+#entries {
+    background-color:#ebebeb;
+    margin-bottom:40px;
+    width:500px;
+    padding:20px;
+    padding-bottom:10px;
+}
+
+.qte {
+    font-family:Tangerine;
+    font-size:35px;
+}
+
+#perma {
+    width:540px;
+    margin-left:-17px;
+}
+
+.perm {
+    display:inline-block;
+    width:136px;
+    padding:0px 20px;
+    margin-top:5px;
+}
+
+.perm a{
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:Oswald;
+}
+
+.lft {
+    text-align:left;
+}
+
+.mid {
+    text-align:center;
+}
+
+.rght {
+    text-align:right;
+}
+
+#tags {
+    width: 520px;
+    padding: 20px 10px;
+    text-align: justify;
+    margin-top: -50px;
+    font-size: 11px;
+}
+
+#tags a{
+    text-decoration:none;
+}
+
+ol.notes {
+    list-style-type:none;
+}
+
+li.note {
+    margin-bottom:1px;
+}
+
+.notes img {
+    border-radius:100%;
+}
+
+</style>
+</head>
+    
+<body>
+
+<div id="all">
+
+    <div id="topnav">
+<div class="prev pagi"><a href="/">&#9664;</a></div>
+        <div id="toptitle">
+            <a href="/">&mdash; TITLE</a>
+        </div>
+        <div id="toplinks">
+            <a href="/" class="tl">LINK 1</a>
+            <a href="/" class="tl">LINK 2</a>
+            <a href="/" class="tl">LINK 3</a>
+            <a href="/" class="tl">LINK 4</a>
+            <a href="/" class="tl">LINK 5</a>
+            <a href="/" class="tl">LINK 6</a>
+        </div>
+<div class="next pagi"><a href="/">&#9654;</a></div>
+
+    </div>
+    
+<div id="top">
+</div>
+
+<div id="side">
+
+<div class="box">
+    <div class="boxt">
+        LOREM IPSUM
+    </div>
+    <p>Vestibulum at semper est, et sagittis metus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris tincidunt ex lorem, a laoreet urna viverra volutpat. Phasellus vulputate nisi in efficitur convallis. Phasellus faucibus nunc nec purus malesuada blandit. Pellentesque nec neque tellus. Aenean et diam vitae velit bibendum egestas. Integer libero massa, bibendum tempor odio eget, dignissim porttitor urna. Nam nec semper mi, id congue augue. Nunc ante orci, aliquam non mattis in, maximus vitae ipsum. Aenean at odio lectus.
+</p>
+</div>
+
+<div class="box">
+    <div class="boxt">
+        UPDATES BOX
+    </div>
+    <p><b>DD.MM.YYYY</b> &mdash; Information<br/><b>DD.MM.YYYY</b> &mdash; Information</p>
+</div>
+
+
+    
+</div>
+
+<div id="posts">    
+
+<div id="entries">
+
+
+
+
+
+
+
+
+<div class="qte">&ldquo;It does not matter how slow you go so long as you do not stop.&rdquo;</div><p style="text-align:right;">&mdash; Wisdom of <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FConfucius&amp;t=ODcwNjBmMzI0MTZmYmRlMjBjNDY1ZmE4YTVmNjAyYTcyOTdlYzFkYyxpS3ZtTnk5VA%3D%3D&amp;b=t%3Ay0T-4LsVtmTl7vk9cPzUiQ&amp;p=http%3A%2F%2Fdemo.tumblr.com%2Fpost%2F236%2Fit-does-not-matter-how-slow-you-go-so-long-as-you&amp;m=1">Confucius</a><br></p>
+
+
+
+
+                        
+
+
+
+
+<div id="perma">
+    <div class="perm lft">
+    <a href="/">30 Nov, 2017</a>
+    </div>
+    <div class="perm mid">
+    <a href="/">0 notes</a>
+    </div>
+    <div class="perm rght">
+    <a href="https://www.tumblr.com/reblog/168048765669/POauewzv">reblog?</a>
+    </div>
+</div>
+</div>
+
+
+
+<div id="entries">
+
+
+<img src="https://78.media.tumblr.com/48d9a1885bb93c08a907a9e48426a698/tumblr_p08q78Lv7m1wje9uoo1_500.jpg" alt="Passing through Times Square by Mareen Fischinger"/><p>
+
+Passing through Times Square by <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fwww.mareenfischinger.com%2F&amp;t=YWIzZWMyYzY5ZDczM2ZjZDU1NmFhZDQ4NDE0Y2I3MDI2ZmYwMTY3NCxnT01VUG1keA%3D%3D&amp;b=t%3Ay0T-4LsVtmTl7vk9cPzUiQ&amp;p=http%3A%2F%2Fdemo.tumblr.com%2Fpost%2F459265350%2Fpassing-through-times-square-by-mareen-fischinger&amp;m=1">Mareen Fischinger</a><br></p>
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+
+<div id="perma">
+    <div class="perm lft">
+    <a href="/">30 Nov, 2017</a>
+    </div>
+    <div class="perm mid">
+    <a href="/">0 notes</a>
+    </div>
+    <div class="perm rght">
+    <a href="https://www.tumblr.com/reblog/168048758179/nWs0TxaI">reblog?</a>
+    </div>
+</div>
+</div>
+
+
+
+<div id="entries">
+
+
+
+
+
+
+
+
+
+
+<h2><a href="/" class="link"  style="text-decoration:none;">My favorite web site &raquo;</a></h2><p>
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<br></p>
+
+
+                        
+
+
+
+
+<div id="perma">
+    <div class="perm lft">
+    <a href="/">30 Nov, 2017</a>
+    </div>
+    <div class="perm mid">
+    <a href="/">0 notes</a>
+    </div>
+    <div class="perm rght">
+    <a href="https://www.tumblr.com/reblog/168048734004/z42V0F7U">reblog?</a>
+    </div>
+</div>
+</div>
+
+
+
+<div id="entries">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<b style="font-family:Oswald;">Jack:</b> Hey, you know what sucks?<br/><b style="font-family:Oswald;">Lindsey:</b> vacuums<br/><b style="font-family:Oswald;">Jack:</b> Hey, you know what sucks in a metaphorical sense?<br/><b style="font-family:Oswald;">Lindsey:</b> black holes<br/><b style="font-family:Oswald;">Jack:</b> Hey, you know what just isn&#039;t cool?<br/><b style="font-family:Oswald;">Lindsey:</b> lava?<br/>
+                        
+
+
+
+
+<div id="perma">
+    <div class="perm lft">
+    <a href="/">30 Nov, 2017</a>
+    </div>
+    <div class="perm mid">
+    <a href="/">0 notes</a>
+    </div>
+    <div class="perm rght">
+    <a href="https://www.tumblr.com/reblog/168048724064/VBqWQneh">reblog?</a>
+    </div>
+</div>
+</div>
+
+
+
+<div id="entries">
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+<iframe class="tumblr_audio_player tumblr_audio_player_168048717619" src="https://descenthtml.tumblr.com/post/168048717619/audio_player_iframe/descenthtml/tumblr_ksc4i2SkVU1qz8ouq?audio_file=https%3A%2F%2Fwww.tumblr.com%2Faudio_file%2Fdescenthtml%2F168048717619%2Ftumblr_ksc4i2SkVU1qz8ouq&color=white" frameborder="0" allowtransparency="true" scrolling="no" width="500" height="85"></iframe><p><strong><span><a href="http://allisonweiss.tumblr.com/">Allison Weiss</a></span>&nbsp;&mdash;</strong> Fingers Crossed</p>
+
+<div id="perma">
+    <div class="perm lft">
+    <a href="/">30 Nov, 2017</a>
+    </div>
+    <div class="perm mid">
+    <a href="/">0 notes</a>
+    </div>
+    <div class="perm rght">
+    <a href="https://www.tumblr.com/reblog/168048717619/wEe8GcU4">reblog?</a>
+    </div>
+</div>
+</div>
+
+
+
+<div id="entries">
+<h2>An example post</h2><p>Lorem ipsum dolor sit amet, consectetuer <a href="/">adipiscing elit</a>. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis.</p><ul><li>Lorem ipsum dolor sit amet.</li><li>Consectetuer adipiscing elit.</li><li>Nam at tortor quis ipsum tempor aliquet.</li></ul><p>Cum sociis <a href="/">natoque penatibus</a> et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sed ligula. Sed volutpat odio non turpis gravida luctus. Praesent elit pede, iaculis facilisis, vehicula mattis, tempus non, arcu.</p><blockquote>Donec placerat mauris commodo dolor. Nulla tincidunt. Nulla vitae augue.</blockquote><p>Suspendisse ac pede. Cras <a href="/">tincidunt pretium</a> felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque porttitor mi id felis. Maecenas nec augue. Praesent a quam pretium leo congue accumsan.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+
+<div id="perma">
+    <div class="perm lft">
+    <a href="/">30 Nov, 2017</a>
+    </div>
+    <div class="perm mid">
+    <a href="/">0 notes</a>
+    </div>
+    <div class="perm rght">
+    <a href="https://www.tumblr.com/reblog/168048698784/CM7nHwbE">reblog?</a>
+    </div>
+</div>
+</div>
+
+
+
+<div id="entries">
+<p>
+
+Lorem ipsum dolor sit amet, consectetuer <a href="/">adipiscing elit</a>. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis.<br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+
+<div id="perma">
+    <div class="perm lft">
+    <a href="/">30 Nov, 2017</a>
+    </div>
+    <div class="perm mid">
+    <a href="/">0 notes</a>
+    </div>
+    <div class="perm rght">
+    <a href="https://www.tumblr.com/reblog/168048693709/f2M5vJGw">reblog?</a>
+    </div>
+</div>
+</div>
+
+
+
+</div>
+
+
+</div>
+</html>
